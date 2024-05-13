@@ -14,6 +14,7 @@ export const Common = ({ color }) => (
   </Suspense>
 )
 
+// @ts-ignore
 const View = forwardRef(({ children, orbit, ...props }, ref) => {
   const localRef = useRef(null)
   useImperativeHandle(ref, () => localRef.current)

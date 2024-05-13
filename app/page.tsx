@@ -222,7 +222,7 @@ const Model = () => {
     const capMatList: THREE.Material[] = [];
     const rootGroup = modelRef.current;
     if (rootGroup) {
-      rootGroup.traverse((child: THREE.Object3D) => {
+      rootGroup.traverse((child: any) => {
         if (child.isMesh && child.material && !child.isBrush) {
           child.matrixAutoUpdate = false;
           child.geometry.computeBoundingBox();
@@ -450,13 +450,12 @@ const Model = () => {
 
 export default function Page() {
   return (
-    <>
-      <View className='absolute top-0 flex h-screen w-full flex-col items-center justify-center'>
-        <Suspense fallback={<SuspenseLoader />}>
-          <Model />
-        </Suspense>
-      </View>
-    </>
+    // @ts-ignore
+    <View className='absolute top-0 flex h-screen w-full flex-col items-center justify-center'>
+      <Suspense fallback={<SuspenseLoader />}>
+        <Model />
+      </Suspense>
+    </View>
   );
 }
 
