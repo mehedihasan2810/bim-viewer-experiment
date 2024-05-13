@@ -1,0 +1,29 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  /* Disable text selection for all elements */
+  * {
+    user-select: none;
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* Internet Explorer */
+    -webkit-user-select: none; /* Chrome, Safari, Opera */
+    box-sizing: border-box;
+  }
+
+  /* Allow text selection for elements with class "selectable" */
+  .selectable {
+    user-select: auto;
+  }
+
+  html,
+  body,
+  #root {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+  }
+}
