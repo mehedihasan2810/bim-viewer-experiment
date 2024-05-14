@@ -75,7 +75,7 @@ export const Model = () => {
     'General settings             ',
     {
       ['grid']: true,
-      ['grass']: false,
+      // ['grass']: false,
       dollyToCursor: { value: false, label: 'dolly to cursor' },
       // preset: {
       //   value: preset,

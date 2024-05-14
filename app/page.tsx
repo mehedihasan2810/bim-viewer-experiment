@@ -22,6 +22,7 @@ const Model = dynamic(() => import('@/components/canvas/Examples').then((mod) =>
   //   </div>
   // ),
 });
+useGLTF.preload('/futuristic_building/scene.gltf');
 const View = dynamic(() => import('@/components/canvas/View').then((mod) => mod.View), {
   ssr: false,
   loading: () => (
